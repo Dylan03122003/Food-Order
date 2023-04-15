@@ -1,0 +1,173 @@
+/* 
+TYPOGRAPHY
+-- Font size (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+-- Font weight
++Default: 400
+-- Line height
++Default: 1
+
+COLOR
+-- Primary color: #e67e22
+-- Accent:
+-- Gray:
+-- Lighter: #fdf2e9
+-- Darker:
+SHADOW
+
+
+BORDER-RADIUS
+
+
+WHITESPACE
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+/* DEFUALT SETTING ||||||||||||||||||||||||||||||||*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /* font-size: 10px; this is bad if the user change the font-size setting of the browser*/
+  font-size: 62.5%; /*this is equal to 10px*/
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  font-weight: 400;
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  color: #555;
+  overflow-x: hidden;
+}
+/* GENERAL RESUSABLE SETTING ||||||||||||||||||||||*/
+.general-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+.grid {
+  display: grid;
+  gap: 9.2rem 4.8rem;
+}
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+.small-gap {
+  gap: 2rem;
+}
+.grid-2-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3-columns {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-4-columns {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-5-columns {
+  grid-template-columns: repeat(5, 1fr);
+}
+.grid-center-v {
+  align-items: center;
+}
+.heading-primary,
+.heading-secondary,
+.heading-third {
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 3.2rem;
+  color: #333;
+}
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+}
+.heading-secondary {
+  font-size: 4.2rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.heading-third {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+.sub-heading {
+  display: block;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #cf711f;
+  margin-bottom: 1.6rem;
+  text-transform: uppercase;
+}
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  font-weight: 600;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  color: #fff;
+}
+.btn-outline:link,
+.btn-outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+.btn-full:hover,
+.btn-full:active {
+  background-color: #cf711f;
+}
+.btn-outline:hover,
+.btn-outline:active {
+  background-color: #fdf2e9;
+  box-shadow: inset 0 0 0 3px #fff; /* Trick to set border inside the element */
+}
+/* We can reuse this class to other element which we want to set the margin-right */
+.margin-right-sm {
+  margin-right: 1.6rem;
+}
+.margin-bottom-md {
+  margin-bottom: 5rem !important;
+}
+strong {
+  font-weight: 500;
+}
+.icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
+.center-text {
+  text-align: center;
+}
+.list-diet {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 2rem;
+}
+.list-diet li span {
+  font-size: 2rem;
+}
+.list-diet li {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  line-height: 1.3;
+}
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(207, 113, 31, 0.517);
+}
